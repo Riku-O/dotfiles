@@ -28,7 +28,7 @@ if has('vim_starting')
   let g:syntastic_quite_warnings=0
   
   " Vdebug
-  NeoBundle 'joonty/vdebug'
+  " NeoBundle 'joonty/vdebug'
   
   " Multiple cursors
   NeoBundle 'terryma/vim-multiple-cursors'

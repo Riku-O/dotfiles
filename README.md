@@ -6,7 +6,7 @@ dotfiles
 1. Clone this repository
 
         $ cd ~/
-        $ git clone git@github.com:HayatoKato/dotfiles.git
+        $ git clone git@github.com:Riku-O/dotfiles.git
 
 2. Run setup command
 
