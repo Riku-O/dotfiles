@@ -1,0 +1,38 @@
+"-------------------------------------------------------------------------------
+" NeoBundle 
+"-------------------------------------------------------------------------------
+set nocompatible
+filetype plugin indent off
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+  call neobundle#begin(expand('~/.vim/bundle/'))
+  NeoBundleFetch 'Shougo/neobundle.vim'
+  
+  " キーワード補完システム
+  NeoBundle 'Shougo/neocomplcache'
+  NeoBundle 'Shougo/neosnippet'
+  NeoBundle 'Shougo/neosnippet-snippets'
+  
+  " シンタックスチェック
+  NeoBundle 'scrooloose/syntastic'
+  let g:syntastic_enable_signs=1
+  let g:syntastic_auto_loc_list=1
+  let g:syntastic_mode_map={ 'mode': 'passive',
+                          \ 'active_filetypes': ['php', 'ruby', 'javascript', 'json'],
+                          \ 'passive_filetypes': []
+                          \}
+  let g:syntastic_ruby_checkers=['rubocop']
+  let g:syntastic_javascript_checkers=['jshint']
+  let g:syntastic_php_checkers=['php','phpcs']
+  let g:syntastic_quite_warnings=0
+  
+  " Vdebug
+  NeoBundle 'joonty/vdebug'
+  
+  " Multiple cursors
+  NeoBundle 'terryma/vim-multiple-cursors'
+
+  call neobundle#end()
+endif 
+

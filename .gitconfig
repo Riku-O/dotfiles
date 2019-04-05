@@ -1,0 +1,23 @@
+[user]
+	name = Hayato Kato
+	email = kato.hayato@willgate.co.jp
+
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	lga = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	st = status
+	conflicts = !git ls-files -u | cut -f 2 | sort -u
+	ch = checkout
+	chb = checkout -b
+	chm = checkout master
+	chd = checkout develop
+	br = branch
+	brd = branch -D
+	brda = "!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|master'|xargs git branch -d; };f"
+
+[color]
+	ui = auto
+
+[merge]
+	tool = meld
+

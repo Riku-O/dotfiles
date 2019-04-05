@@ -1,0 +1,2 @@
+# Don't distinguish small letters and capital letters.
+set completion-ignore-case on
